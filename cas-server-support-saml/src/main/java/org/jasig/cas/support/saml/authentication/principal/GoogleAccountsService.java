@@ -23,11 +23,11 @@ import java.io.ByteArrayOutputStream;
 import java.io.UnsupportedEncodingException;
 import java.security.PrivateKey;
 import java.security.PublicKey;
+import java.security.SecureRandom;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Random;
 import java.util.zip.DataFormatException;
 import java.util.zip.Inflater;
 import java.util.zip.InflaterInputStream;
@@ -58,7 +58,7 @@ public class GoogleAccountsService extends AbstractWebApplicationService {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(GoogleAccountsService.class);
 
-    private static Random RANDOM_GENERATOR = new Random();
+    private static SecureRandom RANDOM_GENERATOR = new SecureRandom();
 
     private static final char[] CHAR_MAPPINGS = {
         'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o',
